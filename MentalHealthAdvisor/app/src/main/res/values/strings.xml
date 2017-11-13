@@ -26,9 +26,10 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="depressionButton">Depression</string>
     <string name="copingButton">Ways To Cope</string>
     <string name="testView">Self Checker</string>
-    <string name="qstnOneText">Question One</string>
-    <string name="qstnOneYes">Yes</string>
-    <string name="qstnOneNo">No</string>
+    <string name="qstnOneText">Do you become unusually talkative or overly gregarious, even in situations that may not warrant it?</string>
+    <string name="qstnOneYes">Yes - frequently</string>
+    <string name="qstnOneNo">No - never</string>
     <string name="qstnOneSometimes">Sometimes</string>
-    <string name="qstnTwoText">Question Two</string>
+    <string name="qstnTwoText">Do you act uncharacteristically active and surprisingly outgoing? </string>
+    <string name="qstnThreeText">Do you experience moods where you feel very revved up or agitated?</string>
 </resources>

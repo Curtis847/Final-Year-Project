@@ -54,7 +54,7 @@
                 android:orientation="vertical"
                 android:layout_marginLeft="82dp"
                 android:layout_marginStart="82dp"
-                android:layout_marginTop="82dp" >
+                android:layout_marginTop="132dp" >
 
                 <RadioButton
                     android:id="@+id/qstnOneYes"
@@ -94,7 +94,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="187dp"
+                android:layout_marginTop="227dp"
                 android:text="@string/qstnTwoText"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -107,7 +107,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginLeft="82dp"
                 android:layout_marginStart="82dp"
-                android:layout_marginTop="217dp"
+                android:layout_marginTop="282dp"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -130,6 +130,60 @@
 
                 <RadioButton
                     android:id="@+id/qstnTwoSmetme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/testView"
+                    android:layout_toLeftOf="@+id/testView"
+                    android:layout_toStartOf="@+id/testView"
+                    android:text="@string/qstnOneSometimes"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/qstnThreeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="377dp"
+                android:text="@string/qstnThreeText"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="82dp"
+                android:layout_marginStart="82dp"
+                android:layout_marginTop="432dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/qstnThreeYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/testView"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/qstnOneYes"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/qstnThreeNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/testView"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/qstnOneNo"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/qstnThreeSmetme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/testView"
