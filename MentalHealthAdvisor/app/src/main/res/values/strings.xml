@@ -28,4 +28,7 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="testView">Self Checker</string>
     <string name="qstnOneText">Question One</string>
     <string name="qstnOneYes">Yes</string>
+    <string name="qstnOneNo">No</string>
+    <string name="qstnOneSometimes">Sometimes</string>
+    <string name="qstnTwoText">Question Two</string>
 </resources>
