@@ -35,4 +35,10 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="qstnFourText">Q4. Do you feel both high (overly happy) and low (depressed) at the same time?</string>
     <string name="qstnFiveText">Q5. Do you occasionally become much more interested in sex than usual?</string>
     <string name="qstnSixText">Q6. Does your self-confidence seem to swing wildly from great self-doubt to great arrogance?</string>
+    <string name="qstnSevenText">Q7. Professionally, have you noticed a wide gap in the quantity or quality of your work — where you’re dramatically productive at times, but virtually useless at others?</string>
+    <string name="qstnEightText">Q8. Do you occasionally feel extremely angry or hostile, for what seems like no reason?</string>
+    <string name="qstnNineText">Q9. Do you experience some periods of mental slowness that alternate with periods of immensely creative thinking?</string>
+    <string name="qstnTenText">Q10. Do you vacillate between desires to be very social and to just be left alone?</string>
+    <string name="qstnElevenText">Q11. Do you go through periods of great optimism and other periods of great pessimism?</string>
+    <string name="qstnTwelveText">Q12. Do you go through periods of great sadness, as well as periods of euphoria where you find almost anything funny?</string>
 </resources>
