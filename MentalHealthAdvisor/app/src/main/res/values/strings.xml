@@ -41,4 +41,24 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="qstnTenText">Q10. Do you vacillate between desires to be very social and to just be left alone?</string>
     <string name="qstnElevenText">Q11. Do you go through periods of great optimism and other periods of great pessimism?</string>
     <string name="qstnTwelveText">Q12. Do you go through periods of great sadness, as well as periods of euphoria where you find almost anything funny?</string>
+    <string name="CheckerSubmitBtn">Submit</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="schizoBtn">schizophrenia</string>
+    <string name="homePageTitle">Home Page</string>
+    <string name="homeBtnOne">Mental Health Problems</string>
+    <string name="homeBtnTwo">Self-Checker</string>
+    <string name="homeBtnThree">Find Organizations</string>
 </resources>
