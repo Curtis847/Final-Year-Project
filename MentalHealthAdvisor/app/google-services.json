@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "142015497350",
+    "firebase_url": "https://mentalhealthadvisor-a7dc5.firebaseio.com",
+    "project_id": "mentalhealthadvisor-a7dc5",
+    "storage_bucket": "mentalhealthadvisor-a7dc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142015497350:android:fa08c9f8a58dd516",
+        "android_client_info": {
+          "package_name": "com.advisor.health.mental.mentalhealthadvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142015497350-cdjnbloikha7qo5qb3rbk9i3bnlep6l4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.advisor.health.mental.mentalhealthadvisor",
+            "certificate_hash": "e6f3dee9732cfb758f48cccfa0f67824de27ac5b"
+          }
+        },
+        {
+          "client_id": "142015497350-s47g0pd9sqa7enprf5ttobhm5f71vba1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1kg6C5OkdBGGFQVKNaWwwoXuA0G6CwXs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142015497350-s47g0pd9sqa7enprf5ttobhm5f71vba1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

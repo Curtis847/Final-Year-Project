@@ -61,4 +61,5 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="homeBtnOne">Mental Health Problems</string>
     <string name="homeBtnTwo">Self-Checker</string>
     <string name="homeBtnThree">Find Organizations</string>
+    <string name="title_activity_find_location">Map</string>
 </resources>
