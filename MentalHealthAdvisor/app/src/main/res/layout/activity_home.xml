@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/homePageTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:text="TextView"
+        android:layout_marginTop="50dp"
+        android:text="@string/homePageSummary"
         android:textColor="#000000"
         android:textSize="20sp" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/homePageIntro"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="90dp"
         android:padding="20dp"
         android:text="@string/homeBtnOne"
         android:textSize="20sp" />
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/mentalHealthBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:padding="20dp"
         android:text="@string/homeBtnTwo"
         android:textSize="20sp" />
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/selfCheckerBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:padding="20dp"
         android:text="@string/homeBtnThree"
         android:textSize="20sp" />

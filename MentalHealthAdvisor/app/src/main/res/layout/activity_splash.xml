@@ -13,6 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="194dp"
-        android:text="Hello"
-        android:textSize="30sp" />
+        android:text="@string/splashText"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold" />
 </RelativeLayout>
