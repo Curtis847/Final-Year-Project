@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MentalHealthAdvisorDr</string>
+    <string name="questionTxtField">Enter Question</string>
+    <string name="AddBtn">Add</string>
+</resources>
