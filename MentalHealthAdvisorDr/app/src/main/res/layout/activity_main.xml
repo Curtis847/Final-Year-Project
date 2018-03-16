@@ -7,36 +7,35 @@
     tools:context="com.messenger.practive.mentalhealthadvisordr.MainActivity"
     android:id="@+id/relativeLayout">
 
-    <EditText
-        android:id="@+id/questionTxtField"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="47dp"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/questionTxtField" />
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:id="@+id/quizRec">
+
+    </android.support.v7.widget.RecyclerView>
+
     <Button
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/questionTxtField"
+        android:layout_toEndOf="@id/questionTxtField"
+        android:layout_alignParentBottom="true"
         android:onClick="submitChoice"
         android:text="@string/AddBtn" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+    <EditText
+        android:id="@+id/questionTxtField"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/questionTxtField"
-        android:orientation="vertical">
-
-    </LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/questionTxtField"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>
