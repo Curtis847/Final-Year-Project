@@ -7,16 +7,19 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText editTxtUserName, editTxtEmail, editTxtPassword;
+    ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
 
@@ -30,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTxtEmail = (EditText) findViewById(R.id.emailText);
         editTxtPassword = (EditText) findViewById(R.id.passwordTxt);
         mAuth = FirebaseAuth.getInstance();
+        progressBar = (ProgressBar) findViewById(R.id.registerProgressBar);
 
         findViewById(R.id.registerBtn).setOnClickListener(this);
 
@@ -71,11 +75,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        progressBar.setVisibility(View.VISIBLE);
+
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "User Registered Successfull", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent (RegisterActivity.this, ProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }
+                else {
+
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException) {
+                        Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
