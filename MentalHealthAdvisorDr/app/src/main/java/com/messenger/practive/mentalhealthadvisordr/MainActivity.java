@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         StorageReference storageRef = storage.getReference();
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Quiz");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child(editText.getText().toString());
         quizList = (RecyclerView) findViewById(R.id.quizRec);
         quizList.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     Query query = FirebaseDatabase.getInstance()
             .getReference()
-            .child("Quiz")
+            .child(editText.getText().toString())
             .limitToLast(50);
 
     FirebaseRecyclerOptions<Question> options =
