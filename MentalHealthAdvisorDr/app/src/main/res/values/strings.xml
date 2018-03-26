@@ -20,4 +20,6 @@
     <string name="linkToRegister">Not registered? See here.</string>
     <string name="loginPageTitle">Login</string>
     <string name="loginBtn">Login</string>
+    <string name="saveQuizNameBtn">Save</string>
+    <string name="createQuizBtn">Create Quiz</string>
 </resources>
