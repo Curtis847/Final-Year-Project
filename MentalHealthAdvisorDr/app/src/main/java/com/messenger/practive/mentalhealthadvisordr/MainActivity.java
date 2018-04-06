@@ -125,23 +125,10 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
-
-    /*public void submitChoice(View view) {
-        RadioButton radioButton = new RadioButton(this);
-        radioButton.setTextSize(40);
-        radioButton.setHint("question");
-
-
-
-
-
-    }*/
     @Override
     protected void onStart() {
         super.onStart();
         FBRA.startListening();
-
         quizList.setAdapter(FBRA);
 
     }
@@ -168,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             TextView question_content = (TextView) mView.findViewById(R.id.questionTxt);
             question_content.setText(sQuestion);
         }
-        public void setAnswerOne(String answerOne) {
+       public void setAnswerOne(String answerOne) {
             RadioButton answerOne_content = (RadioButton) mView.findViewById(R.id.answerOne);
             answerOne_content.setText(answerOne);
         }
