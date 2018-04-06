@@ -22,4 +22,6 @@
     <string name="loginBtn">Login</string>
     <string name="saveQuizNameBtn">Save</string>
     <string name="createQuizBtn">Create Quiz</string>
+    <string name="enterAnswerHint">Enter Answer One</string>
+    <string name="nameOfQuizHint">Enter Name Of Quiz</string>
 </resources>

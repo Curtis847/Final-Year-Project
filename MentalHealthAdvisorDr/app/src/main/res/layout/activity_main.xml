@@ -7,27 +7,7 @@
     tools:context="com.messenger.practive.mentalhealthadvisordr.MainActivity"
     android:id="@+id/relativeLayout">
 
-    <EditText
-        android:id="@+id/quizNameTxt"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="Quiz Name" />
 
-    <Button
-        android:id="@+id/saveNameBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/quizNameTxt"
-        android:layout_toEndOf="@+id/quizNameTxt"
-        android:layout_toRightOf="@+id/quizNameTxt"
-        android:text="@string/saveQuizNameBtn" />
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -36,7 +16,12 @@
         android:layout_marginTop="60dp"
         android:id="@+id/quizRec">
 
+
+
     </android.support.v7.widget.RecyclerView>
+
+
+
 
     <Button
         android:id="@+id/addBtn"
@@ -68,7 +53,7 @@
         android:layout_toLeftOf="@+id/addBtn"
         android:layout_toStartOf="@+id/addBtn"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="@string/enterAnswerHint"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

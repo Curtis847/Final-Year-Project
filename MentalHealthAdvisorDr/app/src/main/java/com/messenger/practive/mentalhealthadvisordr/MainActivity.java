@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -42,14 +43,16 @@ import java.io.InputStream;
 import java.util.UUID;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
 
-    private EditText quizNameTxt;
+
     private Button mButton;
     private EditText editText;
     private DatabaseReference mDatabase;
     private RecyclerView quizList;
-    private Button saveNameBtn;
+    private EditText answerOneTxt;
+   // private Button saveNameBtn;
+   private EditText quizNameTxt;
 
 
 
@@ -57,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        quizNameTxt = (EditText) findViewById(R.id.quizNameTxt);
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Quiz");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Quiz");//creates first child of the firebase database called Quiz
         quizList = (RecyclerView) findViewById(R.id.quizRec);
         quizList.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -66,36 +68,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         quizList.setLayoutManager(linearLayoutManager);
         mButton = (Button) findViewById(R.id.addBtn);
         editText = (EditText) findViewById(R.id.questionTxtField);
-        saveNameBtn = (Button) findViewById(R.id.saveNameBtn);
+        answerOneTxt = (EditText) findViewById(R.id.answerOneTxt);
+        //saveNameBtn = (Button) findViewById(R.id.saveNameBtn);
+        //quizNameTxt = (EditText) findViewById(R.id.quizNameTxt);
 
-        saveNameBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDatabase.push().setValue(quizNameTxt.getText().toString());
-            }
-        });
-
-       mButton.setOnClickListener(new View.OnClickListener() {
+       /*mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final String questionValue = editText.getText().toString().trim();
                 if (!TextUtils.isEmpty(questionValue)) {
                     final DatabaseReference newQuestion = mDatabase.push();
-                    newQuestion.child("Quiz").setValue(questionValue);
+                    newQuestion.child("Question").setValue(questionValue);
                 }
 
             }
-        });
+        });*/
+
 
     }
 
-    /*public void submitChoice(View view) {
+    public void submitChoice(View view) {
         final String questionValue = editText.getText().toString().trim();
-        if (!TextUtils.isEmpty(questionValue)) {
+        final String answerOneValue = answerOneTxt.getText().toString().trim();
+        if ((!TextUtils.isEmpty(questionValue )) && (!TextUtils.isEmpty(answerOneValue))) {
             final DatabaseReference newQuestion = mDatabase.push();
+            final DatabaseReference newAnswerOne = mDatabase.push();
             newQuestion.child("Question").setValue(questionValue);
+            newAnswerOne.child(questionValue).child("/Answers").setValue(answerOneValue);
         }
-    }*/
+
+    }
 
     Query query = FirebaseDatabase.getInstance()
             .getReference()
@@ -150,16 +152,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FBRA.stopListening();
     }
 
-    @Override
-    public void onClick(View v) {
 
-    }
+
+
 
 
     private static class QuestionViewHolder extends RecyclerView.ViewHolder {
 
         View mView;
-        QuestionViewHolder(View itemView) {
+        public QuestionViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
         }
@@ -167,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             TextView question_content = (TextView) mView.findViewById(R.id.questionTxt);
             question_content.setText(sQuestion);
         }
-        void setAnswerOne(String answerOne) {
+        public void setAnswerOne(String answerOne) {
             RadioButton answerOne_content = (RadioButton) mView.findViewById(R.id.answerOne);
             answerOne_content.setText(answerOne);
         }
