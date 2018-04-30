@@ -64,4 +64,11 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="title_activity_find_location">Map</string>
     <string name="splashText">Mental Health Advisor</string>
     <string name="homePageSummary">Welcome to Mental Health Advisor. It is the hope of this app that you find any help or support you may need.</string>
+    <string name="emailHint">Email Address</string>
+    <string name="usernameHint">Username</string>
+    <string name="passwordHint">Password</string>
+    <string name="registerBtn">Register</string>
+    <string name="linkToLogin">Already registered? Click here to login.</string>
+    <string name="loginBtn">Login</string>
+    <string name="linkToRegister">Not registered? See here.</string>
 </resources>

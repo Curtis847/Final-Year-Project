@@ -47,7 +47,10 @@
 
         <activity
             android:name=".FindLocationActivity"
-            android:label="@string/title_activity_find_location"></activity>
+            android:label="@string/title_activity_find_location" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
