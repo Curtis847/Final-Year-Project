@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         showActivity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
+                Intent intent = new Intent(getApplicationContext(),BipolarActivity.class);
                 startActivity(intent);
             }
         });

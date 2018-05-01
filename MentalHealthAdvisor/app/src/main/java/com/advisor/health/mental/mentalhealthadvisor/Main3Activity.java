@@ -10,7 +10,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_quiz);
     }
     /*final RadioButton yesBtn = (RadioButton)findViewById(R.id.qstnOneYes);
     final RadioButton noBtn = (RadioButton)findViewById(R.id.qstnOneNo);
