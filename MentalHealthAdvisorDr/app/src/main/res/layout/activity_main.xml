@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.messenger.practive.mentalhealthadvisordr.MainActivity"
-    android:id="@+id/relativeLayout">
-
-
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -21,26 +24,10 @@
     </android.support.v7.widget.RecyclerView>
 
 
-
-
-    <Button
-        android:id="@+id/addBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/questionTxtField"
-        android:layout_toEndOf="@id/questionTxtField"
-        android:layout_alignParentBottom="true"
-        android:onClick="submitChoice"
-        android:text="@string/AddBtn" />
-
-    <EditText
+        <EditText
         android:id="@+id/questionTxtField"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/addBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:editable="true"
         android:ems="10"
         android:hint="@string/questionTxtField"
         android:inputType="textPersonName" />
@@ -49,11 +36,33 @@
         android:id="@+id/answerOneTxt"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/questionTxtField"
-        android:layout_toLeftOf="@+id/addBtn"
-        android:layout_toStartOf="@+id/addBtn"
         android:ems="10"
         android:hint="@string/enterAnswerHint"
         android:inputType="textPersonName" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/answerTwoTxt"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/questionTxtField"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/answerThreeTxt"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/questionTxtField"
+        android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitChoice"
+            android:text="@string/AddBtn" />
+
+    </LinearLayout>
+
+</ScrollView>

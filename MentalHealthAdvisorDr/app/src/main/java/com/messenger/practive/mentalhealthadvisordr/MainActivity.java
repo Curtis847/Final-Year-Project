@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText answerOneTxt;
    // private Button saveNameBtn;
    private EditText quizNameTxt;
+   private EditText answerTwoTxt;
+   private EditText answerThreeTxt;
 
 
 
@@ -69,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
         mButton = (Button) findViewById(R.id.addBtn);
         editText = (EditText) findViewById(R.id.questionTxtField);
         answerOneTxt = (EditText) findViewById(R.id.answerOneTxt);
-        //saveNameBtn = (Button) findViewById(R.id.saveNameBtn);
+        answerTwoTxt = (EditText) findViewById(R.id.answerTwoTxt);
+        answerThreeTxt = (EditText) findViewById(R.id.answerThreeTxt);
+
         //quizNameTxt = (EditText) findViewById(R.id.quizNameTxt);
 
        /*mButton.setOnClickListener(new View.OnClickListener() {
@@ -88,13 +92,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitChoice(View view) {
-        final String questionValue = editText.getText().toString().trim();
-        final String answerOneValue = answerOneTxt.getText().toString().trim();
+        String questionValue = editText.getText().toString().trim();
+        String answerOneValue = answerOneTxt.getText().toString().trim();
+        String answerTwoValue = answerTwoTxt.getText().toString().trim();
+        String answerThreeValue = answerThreeTxt.getText().toString().trim();
         if ((!TextUtils.isEmpty(questionValue )) && (!TextUtils.isEmpty(answerOneValue))) {
             final DatabaseReference newQuestion = mDatabase.push();
-            final DatabaseReference newAnswerOne = mDatabase.push();
-            newQuestion.child("Question").setValue(questionValue);
-            newAnswerOne.child(questionValue).child("/Answers").setValue(answerOneValue);
+            //final DatabaseReference newAnswerOne = mDatabase.push();
+            //final DatabaseReference newAnswerTwo = mDatabase.push();
+            //final DatabaseReference newAnswerThree = mDatabase.push();
+            Question question = new Question(questionValue, answerOneValue, answerTwoValue, answerThreeValue);
+            newQuestion.child("Question").setValue(question);
+            //newAnswerOne.child(questionValue).child("Answers").setValue(answerOneValue);
+            //newAnswerTwo.child("Answers").setValue(answerTwoValue);
+            //newAnswerThree.child("Answers").setValue(answerThreeValue);
         }
 
     }
@@ -122,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onBindViewHolder(QuestionViewHolder holder, int position, Question model) {
             holder.setQuestion(model.getQuestion());
             holder.setAnswerOne(model.getAnswerOne());
+            holder.setAnswerTwo(model.getAnswerTwo());
+            holder.setAnswerThree(model.getAnswerThree());
         }
     };
 
@@ -158,6 +171,16 @@ public class MainActivity extends AppCompatActivity {
        public void setAnswerOne(String answerOne) {
             RadioButton answerOne_content = (RadioButton) mView.findViewById(R.id.answerOne);
             answerOne_content.setText(answerOne);
+        }
+
+        public void setAnswerTwo(String answerTwo) {
+            RadioButton answerTwo_content = (RadioButton) mView.findViewById(R.id.answerTwo);
+            answerTwo_content.setText(answerTwo);
+        }
+
+        public void setAnswerThree(String answerThree) {
+            RadioButton answerThree_content = (RadioButton) mView.findViewById(R.id.answerThree);
+            answerThree_content.setText(answerThree);
         }
     }
 }
