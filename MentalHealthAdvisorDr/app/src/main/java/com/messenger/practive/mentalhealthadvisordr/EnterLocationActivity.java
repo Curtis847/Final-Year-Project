@@ -1,19 +1,16 @@
 package com.messenger.practive.mentalhealthadvisordr;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class EnterInformationActivity extends AppCompatActivity implements View.OnClickListener{
+public class EnterLocationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private DatabaseReference mDatabase;
     private Button btnsave;
@@ -24,14 +21,14 @@ public class EnterInformationActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter_information);
+        setContentView(R.layout.activity_enter_location);
 
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("Users");
         editTextName=(EditText)findViewById(R.id.editTextName);
         editTextLatitude=(EditText)findViewById(R.id.editTextLatitude);
         editTextLongitude=(EditText)findViewById(R.id.editTextLongitude);
-        btnsave=(Button)findViewById(R.id.btnsave);
+        btnsave=(Button)findViewById(R.id.saveBtn);
         btnsave.setOnClickListener(this);
 
 
@@ -41,9 +38,9 @@ public class EnterInformationActivity extends AppCompatActivity implements View.
         String name =editTextName.getText().toString().trim();
         double latitude= Double.parseDouble(editTextLatitude.getText().toString().trim());
         double longitude= Double.parseDouble(editTextLongitude.getText().toString().trim());
-        UserInformation userInformation=new UserInformation(name,latitude,longitude);
+        LocationInformation locationInformation =new LocationInformation(name,latitude,longitude);
 
-        mDatabase.child(name).setValue(userInformation);
+        mDatabase.child(name).setValue(locationInformation);
 
         Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
     }

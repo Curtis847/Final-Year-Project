@@ -111,10 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     Query query = FirebaseDatabase.getInstance()
             .getReference()
             .child("Quiz")
             .limitToLast(50);
+
+
 
     FirebaseRecyclerOptions<Question> options =
             new FirebaseRecyclerOptions.Builder<Question>()

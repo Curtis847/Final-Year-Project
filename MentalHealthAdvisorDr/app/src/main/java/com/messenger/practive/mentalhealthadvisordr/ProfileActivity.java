@@ -27,6 +27,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void enterLocation(View v) {
-        startActivity(new Intent(ProfileActivity.this, EnterInformationActivity.class));
+        startActivity(new Intent(ProfileActivity.this, EnterLocationActivity.class));
     }
 }

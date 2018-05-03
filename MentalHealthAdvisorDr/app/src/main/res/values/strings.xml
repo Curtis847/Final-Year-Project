@@ -24,4 +24,10 @@
     <string name="createQuizBtn">Create Quiz</string>
     <string name="enterAnswerHint">Enter Answer One</string>
     <string name="nameOfQuizHint">Enter Name Of Quiz</string>
+    <string name="saveLocationBtn">Save This Location</string>
+    <string name="locationNameHint">Location Name</string>
+    <string name="latitudeHint">Latitude</string>
+    <string name="logitudeHint">Longitude</string>
+    <string name="enterLocationIntroTxt">Here you can enter the names and locations of any organizations or groups that you feel may help users of the Patient app. Just enter the information and click the save button. This location will then be saved and displayed to the app users once they visit the Find Organization, function.</string>
+    <string name="enterLocationHeader">Enter Location</string>
 </resources>
