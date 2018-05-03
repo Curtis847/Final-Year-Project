@@ -42,7 +42,9 @@ public class EnterInformationActivity extends AppCompatActivity implements View.
         double latitude= Double.parseDouble(editTextLatitude.getText().toString().trim());
         double longitude= Double.parseDouble(editTextLongitude.getText().toString().trim());
         UserInformation userInformation=new UserInformation(name,latitude,longitude);
-        mDatabase.child("Users").setValue(userInformation);
+
+        mDatabase.child(name).setValue(userInformation);
+
         Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
     }
 
