@@ -34,7 +34,7 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
 
     }
 
-    private void saveUserInformation(){
+    private void saveLocationInformation(){
         String name =editTextName.getText().toString().trim();
         double latitude= Double.parseDouble(editTextLatitude.getText().toString().trim());
         double longitude= Double.parseDouble(editTextLongitude.getText().toString().trim());
@@ -48,7 +48,7 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View view) {
         if (view==btnsave){
-            saveUserInformation();
+            saveLocationInformation();
             editTextName.getText().clear();
             editTextLatitude.getText().clear();
             editTextLongitude.getText().clear();

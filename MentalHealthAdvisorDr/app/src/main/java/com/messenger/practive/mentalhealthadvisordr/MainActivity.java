@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
    private EditText answerTwoTxt;
    private EditText answerThreeTxt;
    private Button addBtn;
+   private EditText quizName;
 
 
 
@@ -63,11 +64,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Quiz");//creates first child of the firebase database called Quiz
         quizList = (RecyclerView) findViewById(R.id.quizRec);
         quizList.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setStackFromEnd(false);
         quizList.setLayoutManager(linearLayoutManager);
         mButton = (Button) findViewById(R.id.addBtn);
         editText = (EditText) findViewById(R.id.questionTxtField);
