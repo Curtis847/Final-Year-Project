@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class Main3Activity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,15 +1,15 @@
 package com.advisor.health.mental.mentalhealthadvisor;
 
-public class UserInformation {
+public class LocationInformation {
 
     public String name;
     public  double latitude;
     public  double longitude;
 
-    public UserInformation(){
+    public LocationInformation(){
 
     }
-    public UserInformation(String name,double latitude,double longitude){
+    public LocationInformation(String name, double latitude, double longitude){
         this.name=name;
         this.latitude=latitude;
         this.longitude=longitude;

@@ -4,50 +4,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class BipolarActivity extends AppCompatActivity {
+
+    private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bipolar);
 
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Issues");
 
-        //final Button checkSelf = (Button)findViewById(R.id.selfChecker);
-        //final Button setVisible = (Button)findViewById(R.id.button3);
-        //final Button hideBipolar = (Button)findViewById(R.id.button2);
-        final Button copeButton = (Button)findViewById(R.id.copeButton);
 
-        /*setVisible.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView text = (TextView) findViewById(R.id.textView3) ;
-                text.setVisibility(View.VISIBLE);
-                setVisible.setVisibility(View.INVISIBLE);
-                checkSelf.setVisibility(View.INVISIBLE);
-                //hideBipolar.setVisibility(View.VISIBLE);
-                copeButton.setVisibility(View.VISIBLE);
-            }
-        });*/
 
-        /*hideBipolar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView text = (TextView) findViewById(R.id.textView3);
-                text.setVisibility(View.INVISIBLE);
-                hideBipolar.setVisibility(View.INVISIBLE);
-                setVisible.setVisibility(View.VISIBLE);
-                checkSelf.setVisibility(View.VISIBLE);
-                copeButton.setVisibility((View.INVISIBLE));
-            }
-        });*/
-
-        /*checkSelf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
-                startActivity(intent);
-            }
-        });*/
 
     }
 }

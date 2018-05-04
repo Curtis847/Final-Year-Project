@@ -3,10 +3,7 @@ package com.advisor.health.mental.mentalhealthadvisor;
 import android.location.LocationListener;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -24,16 +21,14 @@ import android.location.Location;
 
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.ChildEventListener;
 
 
 public class FindLocationActivity extends FragmentActivity implements OnMapReadyCallback,LocationListener,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private static final String TAG = "MainActivity";
     private ChildEventListener mChildEventListener;
-    private DatabaseReference mUsers;
+    private DatabaseReference mLocations;
     Marker marker;
 
     @Override
@@ -47,8 +42,8 @@ public class FindLocationActivity extends FragmentActivity implements OnMapReady
 
 
         ChildEventListener mChildEventListener;
-        mUsers= FirebaseDatabase.getInstance().getReference("Users");
-        mUsers.push().setValue(marker);
+        mLocations= FirebaseDatabase.getInstance().getReference("Users");
+        mLocations.push().setValue(marker);
 
     }
 
@@ -56,12 +51,12 @@ public class FindLocationActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         googleMap.setOnMarkerClickListener(this);
-        googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        mUsers.addListenerForSingleValueEvent(new ValueEventListener() {
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mLocations.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
-                    UserInformation user = s.getValue(UserInformation.class);
+                    LocationInformation user = s.getValue(LocationInformation.class);
                     LatLng location=new LatLng(user.latitude,user.longitude);
                     mMap.addMarker(new MarkerOptions().position(location).title(user.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
                 }
