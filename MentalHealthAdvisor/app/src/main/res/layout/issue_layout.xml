@@ -1,36 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/issueNameTxt"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Issue Name"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/issueDetailsTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Issue Details" />
+            <TextView
+                android:id="@+id/issueNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Issue Name"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="40sp"
+                android:layout_marginBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/waysToCopeTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ways to Cope"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Details"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/issueDetailsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Issue Details"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Coping Methods"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/waysToCopeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ways to Cope"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="18sp"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Resources"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/linksOrResources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+
 
 </LinearLayout>

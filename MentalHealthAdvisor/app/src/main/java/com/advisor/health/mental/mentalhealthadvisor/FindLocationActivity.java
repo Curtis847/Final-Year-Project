@@ -4,6 +4,7 @@ import android.location.LocationListener;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -42,8 +43,10 @@ public class FindLocationActivity extends FragmentActivity implements OnMapReady
 
 
         ChildEventListener mChildEventListener;
-        mLocations= FirebaseDatabase.getInstance().getReference("Users");
+        mLocations= FirebaseDatabase.getInstance().getReference("Locations");
         mLocations.push().setValue(marker);
+
+
 
     }
 

@@ -31,7 +31,7 @@
 
     <Button
         android:id="@+id/mentalHealthBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/homePageIntro"
         android:layout_centerHorizontal="true"
@@ -42,7 +42,7 @@
 
     <Button
         android:id="@+id/selfCheckerBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/mentalHealthBtn"
         android:layout_centerHorizontal="true"
@@ -53,7 +53,7 @@
 
     <Button
         android:id="@+id/findOrganizationBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/selfCheckerBtn"
         android:layout_centerHorizontal="true"
