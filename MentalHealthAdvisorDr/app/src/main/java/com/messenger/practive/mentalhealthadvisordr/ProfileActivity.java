@@ -14,6 +14,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private Button createQuizBtn;
     private Button enterLocation;
+    private Button enterIssueBtn;
     private Button createBtn;
     private EditText quizName;
 
@@ -24,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         createQuizBtn = (Button) findViewById(R.id.createQuizBtn);
         enterLocation = (Button) findViewById(R.id.enterLocationBtn);
+        enterIssueBtn = (Button) findViewById(R.id.enterIssueBtn);
 
 
     }
@@ -37,5 +39,9 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void enterLocation(View v) {
         startActivity(new Intent(ProfileActivity.this, EnterLocationActivity.class));
+    }
+
+    public void enterIssue(View v) {
+        startActivity(new Intent(ProfileActivity.this, EnterIssueActivity.class));
     }
 }

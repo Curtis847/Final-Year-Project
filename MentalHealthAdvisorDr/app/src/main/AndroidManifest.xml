@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".EnterLocationActivity"></activity>
+        <activity android:name=".EnterLocationActivity" />
+        <activity android:name=".EnterIssueActivity"></activity>
     </application>
 
 </manifest>

@@ -24,7 +24,7 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_enter_location);
 
 
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("Users");
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("Locations");
         editTextName=(EditText)findViewById(R.id.editTextName);
         editTextLatitude=(EditText)findViewById(R.id.editTextLatitude);
         editTextLongitude=(EditText)findViewById(R.id.editTextLongitude);

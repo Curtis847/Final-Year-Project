@@ -94,9 +94,28 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public void saveQuestionInformation () {
+        final String questionValue = editText.getText().toString().trim();
+        final String answerOneValue = answerOneTxt.getText().toString().trim();
+        final String answerTwoValue = answerTwoTxt.getText().toString().trim();
+        final String answerThreeValue = answerThreeTxt.getText().toString().trim();
+        Question question = new Question(questionValue, answerOneValue, answerTwoValue, answerThreeValue);
+
+        if ((!TextUtils.isEmpty(questionValue )) && (!TextUtils.isEmpty(answerOneValue))) {
+            final DatabaseReference newQuestion = mDatabase.push();
+            //final DatabaseReference newAnswerOne = mDatabase.push();
+            //final DatabaseReference newAnswerTwo = mDatabase.push();
+            //final DatabaseReference newAnswerThree = mDatabase.push();
+            mDatabase.child(questionValue).setValue(question);
+            //newAnswerOne.child(questionValue).child("Answers").setValue(answerOneValue);
+            //newAnswerTwo.child("Answers").setValue(answerTwoValue);
+            //newAnswerThree.child("Answers").setValue(answerThreeValue);
+        }
+
+    }
 
     public void submitChoice(View view) {
-        final String questionValue = editText.getText().toString().trim();
+        /*final String questionValue = editText.getText().toString().trim();
         final String answerOneValue = answerOneTxt.getText().toString().trim();
         final String answerTwoValue = answerTwoTxt.getText().toString().trim();
         final String answerThreeValue = answerThreeTxt.getText().toString().trim();
@@ -110,7 +129,12 @@ public class MainActivity extends AppCompatActivity {
             //newAnswerOne.child(questionValue).child("Answers").setValue(answerOneValue);
             //newAnswerTwo.child("Answers").setValue(answerTwoValue);
             //newAnswerThree.child("Answers").setValue(answerThreeValue);
-        }
+        }*/
+        saveQuestionInformation();
+        editText.getText().clear();
+        answerOneTxt.getText().clear();
+        answerTwoTxt.getText().clear();
+        answerThreeTxt.getText().clear();
 
     }
 
