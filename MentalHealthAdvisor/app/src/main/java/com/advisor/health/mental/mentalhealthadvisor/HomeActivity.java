@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         mentalHealthBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),BipolarActivity.class);
+                Intent intent = new Intent(getApplicationContext(),DisplayIssuesActivity.class);
                 startActivity(intent);
             }
         });

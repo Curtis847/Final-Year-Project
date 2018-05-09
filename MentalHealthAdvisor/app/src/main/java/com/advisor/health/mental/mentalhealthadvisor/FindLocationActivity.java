@@ -59,9 +59,9 @@ public class FindLocationActivity extends FragmentActivity implements OnMapReady
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
-                    LocationInformation user = s.getValue(LocationInformation.class);
-                    LatLng location=new LatLng(user.latitude,user.longitude);
-                    mMap.addMarker(new MarkerOptions().position(location).title(user.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                    LocationInformation localInfo = s.getValue(LocationInformation.class);
+                    LatLng location=new LatLng(localInfo.latitude,localInfo.longitude);
+                    mMap.addMarker(new MarkerOptions().position(location).title(localInfo.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
                 }
             }
 

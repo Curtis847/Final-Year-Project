@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -16,7 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-public class BipolarActivity extends AppCompatActivity {
+public class DisplayIssuesActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private TextView issueName;
@@ -29,7 +28,7 @@ public class BipolarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bipolar);
+        setContentView(R.layout.activity_display_issues);
 
         issueList = (RecyclerView) findViewById(R.id.issueRec);
         issueList.setHasFixedSize(true);
