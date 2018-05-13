@@ -19,13 +19,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import android.location.Location;
 
-
-
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Marker;
 import com.google.firebase.database.ChildEventListener;
 
 
+/*
+Code by kishor sourced from: https://kishorprogamer.wixsite.com/maps
+
+ */
 public class FindLocationActivity extends FragmentActivity implements OnMapReadyCallback,LocationListener,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
