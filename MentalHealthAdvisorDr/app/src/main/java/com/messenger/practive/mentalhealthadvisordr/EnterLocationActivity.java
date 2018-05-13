@@ -9,9 +9,14 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/*
+Code by kishor sourced from: https://kishorprogamer.wixsite.com/maps
+
+ */
+
 public class EnterLocationActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase; //Reference for the firebase database
     private Button btnSave;
     private EditText editTextName;
     private EditText editTextLatitude;
@@ -22,7 +27,7 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_location);
 
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("Locations");
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("Locations"); //instance
         editTextName=(EditText)findViewById(R.id.editTextName);
         editTextLatitude=(EditText)findViewById(R.id.editTextLatitude);
         editTextLongitude=(EditText)findViewById(R.id.editTextLongitude);
