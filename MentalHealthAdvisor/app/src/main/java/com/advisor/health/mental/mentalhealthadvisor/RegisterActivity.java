@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
-    EditText editTxtUserName, editTxtEmail, editTxtPassword;
+    EditText editTxtEmail, editTxtPassword;
     ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -29,7 +29,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
 
         findViewById(R.id.loginLink).setOnClickListener(this);
-        editTxtUserName = (EditText) findViewById(R.id.userNameTxt);
         editTxtEmail = (EditText) findViewById(R.id.emailText);
         editTxtPassword = (EditText) findViewById(R.id.passwordTxt);
         mAuth = FirebaseAuth.getInstance();
@@ -40,15 +39,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void registerUser() {
-        String username = editTxtUserName.getText().toString().trim();
         String email = editTxtEmail.getText().toString().trim();
         String password = editTxtPassword.getText().toString().trim();
 
-        if(username.isEmpty()) {
-            editTxtUserName.setError("Username is required");
-            editTxtUserName.requestFocus();
-            return;
-        }
 
 
         if(email.isEmpty()) {

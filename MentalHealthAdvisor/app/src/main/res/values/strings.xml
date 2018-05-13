@@ -4,21 +4,7 @@
     <string name="buttonText">Bipolar Disorder</string>
     <string name="textViewText2">Bipolar Disorder</string>
     <string name="buttonText2">Back</string>
-    <string name="practiceTextView">Bipolar disorder used to be called ‘manic depression’. As the name suggests, it is characterised by episodes of very low mood or depression and/or high mood or mania.
-An episode of very low mood/ depression involves feelings of hopelessness and despair. These types of bipolar symptoms can include:
-Sad, despairing, hopeless feelings
-Loss of interest in food, work, sex and other people
-Difficulty sleeping or over-sleeping
-Chronic aches or pains with no identifiable cause
-A high mood involves feelings of elation. This is also known as mania. These types of bipolar symptoms can include:
-Rapid thoughts and/ or speech
-Impaired judgement
-Over-spending/ buying unnecessary items on impulse
-Unusually high levels of energy and little need for sleep
-Unrealistic beliefs about one’s own abilities
-A mixed mood involves a mixture of the above symptoms. For example, depressed mood with the restlessness and over activity of a manic episode.
-People usually experience both low and high moods, but some will have only high or low episodes.
-Bipolar disorder affects about one in every 100 adults. It can start at any time during or after the teenage years, although it is unusual for it to start after the age of 40. Men and women are affected equally.</string>
+
     <string name="button3">Show</string>
     <string name="checkerButton">Check Self</string>
     <string name="hideBipolar">Back</string>
@@ -26,21 +12,7 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="depressionButton">Depression</string>
     <string name="copingButton">Ways To Cope</string>
     <string name="testView">Self Checker</string>
-    <string name="qstnOneText">Q1. Do you become unusually talkative or overly gregarious, even in situations that may not warrant it?</string>
-    <string name="qstnOneYes">Yes - frequently</string>
-    <string name="qstnOneNo">No - never</string>
-    <string name="qstnOneSometimes">Sometimes</string>
-    <string name="qstnTwoText">Q2. Do you act uncharacteristically active and surprisingly outgoing? </string>
-    <string name="qstnThreeText">Q3. Do you experience moods where you feel very revved up or agitated?</string>
-    <string name="qstnFourText">Q4. Do you feel both high (overly happy) and low (depressed) at the same time?</string>
-    <string name="qstnFiveText">Q5. Do you occasionally become much more interested in sex than usual?</string>
-    <string name="qstnSixText">Q6. Does your self-confidence seem to swing wildly from great self-doubt to great arrogance?</string>
-    <string name="qstnSevenText">Q7. Professionally, have you noticed a wide gap in the quantity or quality of your work — where you’re dramatically productive at times, but virtually useless at others?</string>
-    <string name="qstnEightText">Q8. Do you occasionally feel extremely angry or hostile, for what seems like no reason?</string>
-    <string name="qstnNineText">Q9. Do you experience some periods of mental slowness that alternate with periods of immensely creative thinking?</string>
-    <string name="qstnTenText">Q10. Do you vacillate between desires to be very social and to just be left alone?</string>
-    <string name="qstnElevenText">Q11. Do you go through periods of great optimism and other periods of great pessimism?</string>
-    <string name="qstnTwelveText">Q12. Do you go through periods of great sadness, as well as periods of euphoria where you find almost anything funny?</string>
+
     <string name="CheckerSubmitBtn">Submit</string>
     <string name="title_activity_login">Sign in</string>
 
@@ -55,15 +27,16 @@ Bipolar disorder affects about one in every 100 adults. It can start at any time
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
+
     </string>
-    <string name="schizoBtn">schizophrenia</string>
     <string name="homePageTitle">Home Page</string>
-    <string name="homeBtnOne">Mental Health Problems</string>
-    <string name="homeBtnTwo">Self-Checker</string>
-    <string name="homeBtnThree">Find Organizations</string>
+    <string name="homeBtnOne">Mental Health Conditions</string>
+    <string name="homeBtnTwo">Self-Checker Quiz</string>
+    <string name="homeBtnThree">Find Locations</string>
     <string name="title_activity_find_location">Map</string>
     <string name="splashText">Mental Health Advisor</string>
-    <string name="homePageSummary">Welcome to Mental Health Advisor. It is the hope of this app that you find any help or support you may need.</string>
+    <string name="homePageSummary">Welcome to Mental Health Advisor. It is the hope of this app that you find any help or support you may need. There a several functions of this app. You need to take a quiz created by a user of our Doctor app? Click the Self-Checker Quiz button
+    Find the location of the nearest medical centre in your area? Click the button labeled Find Locations. Or if you just need basic starting off information on a mental health condition, then you can check if we have that information by clicking the button called Mental Health Conditions</string>
     <string name="emailHint">Email Address</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>

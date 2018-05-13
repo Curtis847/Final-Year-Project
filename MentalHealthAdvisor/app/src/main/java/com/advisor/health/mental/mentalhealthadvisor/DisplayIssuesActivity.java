@@ -18,10 +18,6 @@ import com.google.firebase.database.Query;
 public class DisplayIssuesActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
-    private TextView issueName;
-    private TextView issueDescription;
-    private TextView issueCoping;
-    private TextView linksOrReferences;
     private RecyclerView issueList;
 
 
@@ -36,7 +32,6 @@ public class DisplayIssuesActivity extends AppCompatActivity {
         linearLayoutManager.setStackFromEnd(false);
         issueList.setLayoutManager(linearLayoutManager);
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Issues");
-        issueName = (TextView) findViewById(R.id.issueNameTxt);
 
 
     }

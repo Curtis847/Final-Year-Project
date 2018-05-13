@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
     tools:context="com.advisor.health.mental.mentalhealthadvisor.HomeActivity">
 
-    <TextView
-        android:id="@+id/homePageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:text="@string/homePageTitle"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/homePageIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/homePageTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="@string/homePageSummary"
-        android:textColor="#000000"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/mentalHealthBtn"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/homePageIntro"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:padding="20dp"
-        android:text="@string/homeBtnOne"
-        android:textSize="20sp" />
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/selfCheckerBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/mentalHealthBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:padding="20dp"
-        android:text="@string/homeBtnTwo"
-        android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
 
-    <Button
-        android:id="@+id/findOrganizationBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/selfCheckerBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:padding="20dp"
-        android:text="@string/homeBtnThree"
-        android:textSize="20sp" />
-</RelativeLayout>
+            <TextView
+                android:id="@+id/homePageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/homePageTitle"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/homePageIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/homePageSummary"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/mentalHealthBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:text="@string/homeBtnOne"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/selfCheckerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/homeBtnTwo"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/findOrganizationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/homeBtnThree"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

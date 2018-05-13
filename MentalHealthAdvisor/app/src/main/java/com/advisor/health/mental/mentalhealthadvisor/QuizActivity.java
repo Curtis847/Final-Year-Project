@@ -19,7 +19,7 @@ import com.google.firebase.database.Query;
 
 public class QuizActivity extends AppCompatActivity {
 
-    private DatabaseReference mDatabase;
+    public DatabaseReference mDatabase;
     private RecyclerView quizList;
 
     @Override

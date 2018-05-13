@@ -44,14 +44,6 @@
                 android:paddingBottom="15dp" />
 
             <EditText
-                android:id="@+id/userNameTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/usernameHint"
-                android:inputType="textPersonName" />
-
-            <EditText
                 android:id="@+id/passwordTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

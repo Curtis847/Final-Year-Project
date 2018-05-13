@@ -9,6 +9,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,7 +29,6 @@ import com.google.firebase.database.ChildEventListener;
 public class FindLocationActivity extends FragmentActivity implements OnMapReadyCallback,LocationListener,GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private ChildEventListener mChildEventListener;
     private DatabaseReference mLocations;
     Marker marker;
 
@@ -49,27 +49,33 @@ public class FindLocationActivity extends FragmentActivity implements OnMapReady
 
 
     }
+    private LatLngBounds IRELAND = new LatLngBounds(
+            new LatLng(50.999929,-10.854492), new LatLng(55.354135,-5.339355));
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         googleMap.setOnMarkerClickListener(this);
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(IRELAND, 0));
         mLocations.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
                     LocationInformation localInfo = s.getValue(LocationInformation.class);
                     LatLng location=new LatLng(localInfo.latitude,localInfo.longitude);
-                    mMap.addMarker(new MarkerOptions().position(location).title(localInfo.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                    mMap.addMarker(new MarkerOptions().position(location).title(localInfo.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
                 }
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
+
         });
+
 
     }
 
