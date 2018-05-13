@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     FirebaseAuth mAuth;
     EditText editTxtEmail, editTxtPassword;
-    ProgressBar progressBar;
+    ProgressBar pBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,21 +32,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         editTxtEmail = (EditText) findViewById(R.id.emailTxt);
         editTxtPassword = (EditText) findViewById(R.id.passwordTxt);
-        progressBar = (ProgressBar) findViewById(R.id.registerProgressBar);
+        pBar = (ProgressBar) findViewById(R.id.registerProgressBar);
     }
 
     private void userLogin() {
-        String email = editTxtEmail.getText().toString().trim();
+        String emailAddress = editTxtEmail.getText().toString().trim();
         String password = editTxtPassword.getText().toString().trim();
 
 
-        if(email.isEmpty()) {
+        if(emailAddress.isEmpty()) {
             editTxtEmail.setError("Email is required");
             editTxtEmail.requestFocus();
             return;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if(!Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
             editTxtEmail.setError("Please enter a valid email.");
             editTxtEmail.requestFocus();
             return;
@@ -64,12 +64,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
+        pBar.setVisibility(View.VISIBLE);
 
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(emailAddress, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+                pBar.setVisibility(View.GONE);
                 if(task.isSuccessful()) {
                     Intent intent = new Intent (LoginActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".EnterIssueActivity"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -35,12 +43,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
-            android:text="@string/enterLocationIntroTxt" />
+            android:layout_marginTop="5dp"
+            android:text="@string/enterIssueIntroTxt"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat" />
     </LinearLayout>
 
 
@@ -54,28 +62,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:hint="@string/locationNameHint" />
+            android:hint="@string/issueNameHint"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/issueDetailsTxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:hint="@string/latitudeHint" />
+            android:hint="@string/issueInfoHint"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/waysToCopeTxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:hint="@string/logitudeHint" />
+            android:hint="@string/waysToCopeHint"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/linksOrResourcesTxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:hint="@string/logitudeHint" />
+            android:hint="@string/linksOrResourcesHint"
+            android:inputType="text" />
 
 
     </LinearLayout>
@@ -87,5 +99,6 @@
         android:layout_marginBottom="21dp"
         android:text="@string/saveLocationBtn"
         android:onClick="saveDetails"/>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

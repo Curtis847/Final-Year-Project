@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,14 +22,12 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_location);
 
-
         mDatabase= FirebaseDatabase.getInstance().getReference().child("Locations");
         editTextName=(EditText)findViewById(R.id.editTextName);
         editTextLatitude=(EditText)findViewById(R.id.editTextLatitude);
         editTextLongitude=(EditText)findViewById(R.id.editTextLongitude);
         btnsave=(Button)findViewById(R.id.saveBtn);
         btnsave.setOnClickListener(this);
-
 
     }
 
@@ -39,10 +36,8 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
         double latitude= Double.parseDouble(editTextLatitude.getText().toString().trim());
         double longitude= Double.parseDouble(editTextLongitude.getText().toString().trim());
         LocationInformation locationInformation =new LocationInformation(name,latitude,longitude);
-
         mDatabase.child(name).setValue(locationInformation);
-
-        Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Saved to Database",Toast.LENGTH_LONG).show();
     }
 
     @Override

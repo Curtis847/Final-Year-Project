@@ -30,4 +30,15 @@
     <string name="logitudeHint">Longitude</string>
     <string name="enterLocationIntroTxt">Here you can enter the names and locations of any organizations or groups that you feel may help users of the Patient app. Just enter the information and click the save button. This location will then be saved and displayed to the app users once they visit the Find Organization, function.</string>
     <string name="enterLocationHeader">Enter Location</string>
+    <string name="splashText">Mental Health Advisor</string>
+    <string name="splashTextTwo">Doctor Version</string>
+    <string name="answerTwoHint">Enter Answer Two</string>
+    <string name="answerThreeHint">Enter Answer Three</string>
+    <string name="enterIssueIntroTxt">Here you can enter in information on various mental health conditions. Any information you enter in on this page will be used within this pages counterpart in the Patient version of this app.</string>
+    <string name="issueNameHint">Name of Issue</string>
+    <string name="issueInfoHint">Details on Issue</string>
+    <string name="waysToCopeHint">Ways of coping</string>
+    <string name="linksOrResourcesHint">Links or Resources</string>
+    <string name="homePageTxt">Home</string>
+    <string name="homePageIntroTxt">Here is the Mental Health Advisor, Doctor version. From here you can enter information that will be saved to our database to be used within the Patient app. You can create a quiz for the Patient to take. You can also enter location information of medical centres and basic details about various mental health conditions</string>
 </resources>

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -19,8 +18,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText editTxtUserName, editTxtEmail, editTxtPassword;
-    ProgressBar progressBar;
-
+    ProgressBar pBar;
     private FirebaseAuth mAuth;
 
     @Override
@@ -33,10 +31,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTxtEmail = (EditText) findViewById(R.id.emailText);
         editTxtPassword = (EditText) findViewById(R.id.passwordTxt);
         mAuth = FirebaseAuth.getInstance();
-        progressBar = (ProgressBar) findViewById(R.id.registerProgressBar);
-
+        pBar = (ProgressBar) findViewById(R.id.registerProgressBar);
         findViewById(R.id.registerBtn).setOnClickListener(this);
-
     }
 
     private void registerUser() {
@@ -49,45 +45,38 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTxtUserName.requestFocus();
             return;
         }
-
-
         if(email.isEmpty()) {
             editTxtEmail.setError("Email is required");
             editTxtEmail.requestFocus();
             return;
         }
-
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTxtEmail.setError("Please enter a valid email.");
             editTxtEmail.requestFocus();
             return;
         }
-
         if(password.isEmpty()) {
             editTxtPassword.setError("Password is required");
             editTxtPassword.requestFocus();
             return;
         }
-
         if(password.length() < 6) {
             editTxtPassword.setError("Minimum length of password should be 6");
             editTxtPassword.requestFocus();
             return;
         }
-
-        progressBar.setVisibility(View.VISIBLE);
+        pBar.setVisibility(View.VISIBLE);
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+                pBar.setVisibility(View.GONE);
                 if(task.isSuccessful()) {
                     Intent intent = new Intent (RegisterActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
                 else {
-
                     if(task.getException() instanceof FirebaseAuthUserCollisionException) {
                         Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
                     }

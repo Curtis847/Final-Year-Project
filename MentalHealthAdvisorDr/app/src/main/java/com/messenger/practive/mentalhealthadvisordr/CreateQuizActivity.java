@@ -1,16 +1,5 @@
 package com.messenger.practive.mentalhealthadvisordr;
 
-import android.*;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,30 +9,18 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.UUID;
 
-
-public class MainActivity extends AppCompatActivity {
+public class CreateQuizActivity extends AppCompatActivity {
 
 
     private Button mButton;
@@ -63,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_create_quiz);
 
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Quiz");//creates first child of the firebase database called Quiz
@@ -78,19 +55,6 @@ public class MainActivity extends AppCompatActivity {
         answerTwoTxt = (EditText) findViewById(R.id.answerTwoTxt);
         answerThreeTxt = (EditText) findViewById(R.id.answerThreeTxt);
 
-        //quizNameTxt = (EditText) findViewById(R.id.quizNameTxt);
-
-       /*mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String questionValue = editText.getText().toString().trim();
-                if (!TextUtils.isEmpty(questionValue)) {
-                    final DatabaseReference newQuestion = mDatabase.push();
-                    newQuestion.child("Question").setValue(questionValue);
-                }
-
-            }
-        });*/
 
 
     }
@@ -103,33 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
         if ((!TextUtils.isEmpty(questionValue )) && (!TextUtils.isEmpty(answerOneValue))) {
             final DatabaseReference newQuestion = mDatabase.push();
-            //final DatabaseReference newAnswerOne = mDatabase.push();
-            //final DatabaseReference newAnswerTwo = mDatabase.push();
-            //final DatabaseReference newAnswerThree = mDatabase.push();
+
             mDatabase.child(questionValue).setValue(question);
-            //newAnswerOne.child(questionValue).child("Answers").setValue(answerOneValue);
-            //newAnswerTwo.child("Answers").setValue(answerTwoValue);
-            //newAnswerThree.child("Answers").setValue(answerThreeValue);
         }
 
     }
 
     public void submitChoice(View view) {
-        /*final String questionValue = editText.getText().toString().trim();
-        final String answerOneValue = answerOneTxt.getText().toString().trim();
-        final String answerTwoValue = answerTwoTxt.getText().toString().trim();
-        final String answerThreeValue = answerThreeTxt.getText().toString().trim();
-        Question question = new Question(questionValue, answerOneValue, answerTwoValue, answerThreeValue);
-        if ((!TextUtils.isEmpty(questionValue )) && (!TextUtils.isEmpty(answerOneValue))) {
-            final DatabaseReference newQuestion = mDatabase.push();
-            //final DatabaseReference newAnswerOne = mDatabase.push();
-            //final DatabaseReference newAnswerTwo = mDatabase.push();
-            //final DatabaseReference newAnswerThree = mDatabase.push();
-            mDatabase.child(questionValue).setValue(question);
-            //newAnswerOne.child(questionValue).child("Answers").setValue(answerOneValue);
-            //newAnswerTwo.child("Answers").setValue(answerTwoValue);
-            //newAnswerThree.child("Answers").setValue(answerThreeValue);
-        }*/
         saveQuestionInformation();
         editText.getText().clear();
         answerOneTxt.getText().clear();
@@ -137,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
         answerThreeTxt.getText().clear();
 
     }
-
-
 
     Query query = FirebaseDatabase.getInstance()
             .getReference()
@@ -190,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static class QuestionViewHolder extends RecyclerView.ViewHolder {
-
         View mView;
         public QuestionViewHolder(View itemView) {
             super(itemView);

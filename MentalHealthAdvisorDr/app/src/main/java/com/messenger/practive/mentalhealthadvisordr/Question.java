@@ -1,9 +1,7 @@
 package com.messenger.practive.mentalhealthadvisordr;
-
 /**
  * Created by curti on 23/02/2018.
  */
-
 public class Question {
     private String sQuestion;
     private String sAnswerOne;
@@ -20,7 +18,7 @@ public class Question {
         this.sAnswerTwo = sAnswerTwo;
         this.sAnswerThree = sAnswerThree;
     }
-
+    
     public String getQuestion() {
         return sQuestion;
     }

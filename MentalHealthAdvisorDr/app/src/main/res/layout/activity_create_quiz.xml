@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.messenger.practive.mentalhealthadvisordr.MainActivity"
+    android:background="@drawable/gradient"
+    tools:context="com.messenger.practive.mentalhealthadvisordr.CreateQuizActivity"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
 
         <EditText
         android:id="@+id/questionTxtField"
-        android:layout_width="230dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/questionTxtField"
@@ -34,31 +35,31 @@
 
     <EditText
         android:id="@+id/answerOneTxt"
-        android:layout_width="230dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/enterAnswerHint"
         android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/answerTwoTxt"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/questionTxtField"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/answerTwoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/answerTwoHint"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/answerThreeTxt"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/questionTxtField"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/answerThreeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/answerThreeHint"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/addBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="submitChoice"
             android:text="@string/AddBtn" />

@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class ProfileActivity extends AppCompatActivity {
 
     private Button createQuizBtn;
@@ -31,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void createQuiz(View v) {
-        startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+        startActivity(new Intent(ProfileActivity.this, CreateQuizActivity.class));
 
     }
 
