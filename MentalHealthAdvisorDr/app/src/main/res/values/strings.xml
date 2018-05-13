@@ -41,4 +41,6 @@
     <string name="linksOrResourcesHint">Links or Resources</string>
     <string name="homePageTxt">Home</string>
     <string name="homePageIntroTxt">Here is the Mental Health Advisor, Doctor version. From here you can enter information that will be saved to our database to be used within the Patient app. You can create a quiz for the Patient to take. You can also enter location information of medical centres and basic details about various mental health conditions</string>
+    <string name="saveIssue">Save Issue</string>
+    <string name="issueInformationTitle">Enter Issue Information</string>
 </resources>

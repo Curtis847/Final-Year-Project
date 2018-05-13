@@ -9,11 +9,10 @@ import android.widget.EditText;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private Button createQuizBtn;
-    private Button enterLocation;
-    private Button enterIssueBtn;
-    private Button createBtn;
-    private EditText quizName;
+    public Button createQuizBtn;
+    public Button enterLocation;
+    public Button enterIssueBtn;
+
 
 
     @Override

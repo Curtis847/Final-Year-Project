@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class EnterLocationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private DatabaseReference mDatabase;
-    private Button btnsave;
+    private Button btnSave;
     private EditText editTextName;
     private EditText editTextLatitude;
     private EditText editTextLongitude;
@@ -26,8 +26,8 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
         editTextName=(EditText)findViewById(R.id.editTextName);
         editTextLatitude=(EditText)findViewById(R.id.editTextLatitude);
         editTextLongitude=(EditText)findViewById(R.id.editTextLongitude);
-        btnsave=(Button)findViewById(R.id.saveBtn);
-        btnsave.setOnClickListener(this);
+        btnSave=(Button)findViewById(R.id.saveBtn);
+        btnSave.setOnClickListener(this);
 
     }
 
@@ -42,7 +42,7 @@ public class EnterLocationActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        if (view==btnsave){
+        if (view==btnSave){
             saveLocationInformation();
             editTextName.getText().clear();
             editTextLatitude.getText().clear();

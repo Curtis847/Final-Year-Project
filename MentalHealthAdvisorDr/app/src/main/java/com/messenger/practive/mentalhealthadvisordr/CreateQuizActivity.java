@@ -24,16 +24,14 @@ public class CreateQuizActivity extends AppCompatActivity {
 
 
     private Button mButton;
-    private EditText editText;
+    private EditText questionTxt;
     private DatabaseReference mDatabase;
     private RecyclerView quizList;
     private EditText answerOneTxt;
    // private Button saveNameBtn;
-   private EditText quizNameTxt;
    private EditText answerTwoTxt;
    private EditText answerThreeTxt;
-   private Button addBtn;
-   private EditText quizName;
+   
 
 
 
@@ -50,7 +48,7 @@ public class CreateQuizActivity extends AppCompatActivity {
         linearLayoutManager.setStackFromEnd(false);
         quizList.setLayoutManager(linearLayoutManager);
         mButton = (Button) findViewById(R.id.addBtn);
-        editText = (EditText) findViewById(R.id.questionTxtField);
+        questionTxt = (EditText) findViewById(R.id.questionTxtField);
         answerOneTxt = (EditText) findViewById(R.id.answerOneTxt);
         answerTwoTxt = (EditText) findViewById(R.id.answerTwoTxt);
         answerThreeTxt = (EditText) findViewById(R.id.answerThreeTxt);
@@ -59,7 +57,7 @@ public class CreateQuizActivity extends AppCompatActivity {
 
     }
     public void saveQuestionInformation () {
-        final String questionValue = editText.getText().toString().trim();
+        final String questionValue = questionTxt.getText().toString().trim();
         final String answerOneValue = answerOneTxt.getText().toString().trim();
         final String answerTwoValue = answerTwoTxt.getText().toString().trim();
         final String answerThreeValue = answerThreeTxt.getText().toString().trim();
@@ -75,7 +73,7 @@ public class CreateQuizActivity extends AppCompatActivity {
 
     public void submitChoice(View view) {
         saveQuestionInformation();
-        editText.getText().clear();
+        questionTxt.getText().clear();
         answerOneTxt.getText().clear();
         answerTwoTxt.getText().clear();
         answerThreeTxt.getText().clear();
